@@ -1,0 +1,215 @@
+.topnav {
+	z-index: 1;
+	height: 60px;
+	margin-left: 3px;
+	background-color: rgba(0, 0, 0, 0.411);
+	/* box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.356), 0 5px 0 rgba(0, 0, 0, 0.301), 0 6px 6px rgba(0, 0, 0, 0.144); */
+	box-shadow: -1px 1px 7px 20px rgba(0, 0, 0, 0.411);
+}
+
+.button1 {
+	font-size: 1.1em;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	margin: 5px auto;
+	margin-left: 6px;
+	color: #ccc;
+	background-color: rgb(0, 0, 0);
+	background: -webkit-linear-gradient(#888, #555);
+	background: linear-gradient(#888, #555);
+	border: 0 none;
+	border-radius: 3px;
+	text-shadow: 0 -1px 0 #000;
+	box-shadow: 0 1px 0 #666, 0 5px 0 #444, 0 6px 6px rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+	-webkit-transition: all 150ms ease;
+	transition: all 150ms ease;
+}
+
+.button1:hover,
+button1:focus {
+	-webkit-animation: pulsate 1.2s linear infinite;
+	animation: pulsate 1.2s linear infinite;
+}
+
+@-webkit-keyframes pulsate {
+	0% {
+		color: #ddd;
+		text-shadow: 0 -1px 0 #000;
+	}
+
+	50% {
+		color: #fff;
+		text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+	}
+
+	100% {
+		color: #ddd;
+		text-shadow: 0 -1px 0 #000;
+	}
+}
+
+@keyframes pulsate {
+	0% {
+		color: #ddd;
+		text-shadow: 0 -1px 0 #000;
+	}
+
+	50% {
+		color: #fff;
+		text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+	}
+
+	100% {
+		color: #ddd;
+		text-shadow: 0 -1px 0 #000;
+	}
+}
+
+.button1:active {
+	color: #fff;
+	text-shadow: 0 -1px 0 #444, 0 0 5px #ffd, 0 0 8px #fff;
+	box-shadow: 0 1px 0 #666, 0 2px 0 #444, 0 2px 2px rgba(0, 0, 0, 0.9);
+	-webkit-transform: translateY(3px);
+	transform: translateY(3px);
+	-webkit-animation: none;
+	animation: none;
+}
+
+#CollectionPanel {
+	display: none;
+	background-color: rgba(187, 187, 187, 0.856);
+	box-shadow: -1px 1px 7px 20px rgba(187, 187, 187, 0.664);
+	opacity: 1;
+	position: absolute;
+	top: 13%;
+	left: 3%;
+	height: 81%;
+	width: 94%;
+	box-shadow: -1px 1px 7px 20px rgba(187, 187, 187, 0.856);
+	overflow-y: auto;
+	animation: panelShadow 2s 0s infinite;
+}
+
+#CardPanel {
+	padding-left: 6%;
+	padding-top: 1%;
+	display: none;
+	background-color: rgba(187, 187, 187, 0.856);
+	box-shadow: -1px 1px 7px 20px rgba(187, 187, 187, 0.664);
+	opacity: 1;
+	position: absolute;
+	top: 13%;
+	left: 3%;
+	height: 81%;
+	flex-wrap: wrap;
+	column-gap: 5px;
+	box-shadow: -1px 1px 7px 20px rgba(187, 187, 187, 0.856);
+	overflow-y: auto;
+	animation: panelShadow 2s 0s infinite;
+
+}
+
+#CardPanel::-webkit-scrollbar {
+	width: 10px;
+}
+
+#CardPanel::-webkit-scrollbar-track {
+	background-color: rgba(0, 0, 0, 0.753);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 8px;
+}
+
+#CardPanel::-webkit-scrollbar-thumb {
+	background-color: rgb(255, 41, 41);
+	/* box-shadow: 0 0 38px rgba(219, 88, 88, 0.774); */
+	border-radius: 8px;
+
+	box-shadow: -2px 5px 5px 5px rgba(255, 41, 41, 0.808);
+	-webkit-box-shadow: -2px 5px 5px 5px rgba(255, 41, 41, 0.788);
+	-moz-box-shadow: -2px 5px 5px 53px rgba(255, 41, 41, 0.781);
+}
+
+/* #CardPanel::-webkit-scrollbar-track-piece
+{
+	background-color: rgba(245, 239, 239, 0.781);
+} */
+
+
+.card {
+	display: block;
+	position: relative;
+	width: 200px;
+	height: 270px;
+	margin: 0.1%;
+	margin-left: -5%;
+	border-radius: 8px;
+}
+
+
+.card img {
+	/* margin: 3%; */
+	/* display: block; */
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* border-radius: 8px; */
+}
+
+.card:hover {
+	z-index: 2;
+	transform: translateY(-15px);
+	transition: 0.4s ease-out;
+}
+
+.card:hover~.card {
+	
+	position: relative;
+	left: 10px;
+	transition: 0.4s ease-out;
+}
+
+.buttonAdd {
+	display: none;
+	display: inside;
+	position: absolute;
+	top: 70%;
+	left: 10%;
+	background-color: rgba(255, 255, 255, 0.39);
+	width: 25%;
+	height: 20%;
+	color: black;
+	text-align: center;
+	font-size: 1.5em;
+	border-radius: 200px 200px 200px 200px;
+	-webkit-border-radius: 200px 200px 200px 200px;
+	-moz-border-radius: 200px 200px 200px 200px;
+	border: 5px solid #000000;
+}
+
+.buttonAdd:hover{
+	display: block;
+	font-size: 2.2em;
+	box-shadow: 0px 0px 32px 21px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 32px 21px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 32px 21px rgba(0, 0, 0, 0.75);
+}
+.card:hover>.buttonAdd
+{
+	display:block;
+}
+
+@keyframes panelShadow {
+	0% {
+		box-shadow: -1px 1px 7px 20px rgba(187, 187, 187, 0.664);
+	}
+
+	50% {
+		box-shadow: -1px 1px 7px 10px rgba(187, 187, 187, 0.856);
+	}
+
+	100% {
+		box-shadow: -1px 1px 7px 20px rgba(187, 187, 187, 0.664);
+	}
+}
