@@ -5,18 +5,18 @@ body {
   
   .deckContainer {
     position: absolute;
-    height: 300px;
-    width: 600px;
-    top: 3%;
-    left: calc(10% - 100px);
+    height: 100%;
+    width: 100%;
+    top: 15%;
+    left: calc(25% - 100px);
     display: flex;
   }
   
   .deck {
     display: flex;
     
-    height: 220px;
-    width: 180px;
+    height: 80%;
+    width: 25%;
     background-color: #17141d;
     /* background-image: url("https://www.mtgpics.com/pics/art/tbw/901.jpg"); */
     background-repeat: no-repeat;
@@ -28,6 +28,8 @@ body {
     position: relative;
     left: 0px;
   }
+
+  
 
   .deck1 {
     background-image: url("https://www.mtgpics.com/pics/art/tbw/901.jpg");
@@ -72,10 +74,10 @@ body {
   
   .bar {
     position: absolute;
-    top: 100px;
+    top: 40%;
     left: 20px;
     height: 5px;
-    width: 150px;
+    width: 80%;
   }
   
   .emptybar {

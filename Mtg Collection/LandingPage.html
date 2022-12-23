@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="CollectionPanelContainer.css">
     <script src="ButtonFunctions.js"></script>
     <script src="Initialize.js"></script>
+    <script src="Listeners.js"></script>
 </head>
 
 <body>
@@ -26,54 +27,101 @@
         <button class="button1" onclick="OpenCards();" type="button1">CARDS</button>
     </div>
     <div id="CollectionPanel">
-        <div class="deckContainer">
-            <div class="deck deck1">
-                <h3 class="title">Deck 1</h3>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
+        <div id="DeckDisplayPanel">
+            <div class="deckContainer">
+                <div class="deck deck1">
+                    <h3 class="title">Deck 1</h3>
+                    <div class="bar">
+                        <div class="emptybar"></div>
+                        <div class="filledbar"></div>
+                    </div>
+                    <div class="circle">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="stroke" cx="60" cy="60" r="50" />
+                        </svg>
+                    </div>
                 </div>
-                <div class="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="stroke" cx="60" cy="60" r="50" />
-                    </svg>
+                <div class="deck deck2">
+                    <h3 class="title">Deck 2</h3>
+                    <div class="bar">
+                        <div class="emptybar"></div>
+                        <div class="filledbar"></div>
+                    </div>
+                    <div class="circle">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="stroke" cx="60" cy="60" r="50" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="deck deck3">
+                    <h3 class="title">Deck 3</h3>
+                    <div class="bar">
+                        <div class="emptybar"></div>
+                        <div class="filledbar"></div>
+                    </div>
+                    <div class="circle">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="stroke" cx="60" cy="60" r="50" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="deck deck4">
+                    <h3 class="title">Deck 4</h3>
+                    <div class="bar">
+                        <div class="emptybar"></div>
+                        <div class="filledbar"></div>
+                    </div>
+                    <div class="circle">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <circle class="stroke" cx="60" cy="60" r="50" />
+                        </svg>
+                    </div>
                 </div>
             </div>
-            <div class="deck deck2">
-                <h3 class="title">Deck 2</h3>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-                <div class="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="stroke" cx="60" cy="60" r="50" />
-                    </svg>
-                </div>
+        </div>
+        <div id="DeckInfoPanel">
+            <label for="deckName">Deck Name:</label>
+            <input type="text" id="deckName" name="deckName" class="formInputElem"><br><br>
+            <label for="deckFormat">Format:</label>
+            <select name="deckFormat" id="deckFormat" class="formInputElem formInputSelect"><br><br>
+                <option value="standard">Standard</option>
+                <option value="alchemy">Alchemy</option>
+                <option value="Modern">Modern</option>
+            </select>
+            <!-- <form action="/LandingPage.html">
+            <label for="deckName">Deck Name:</label>
+            <input type="text" id="deckName" name="deckName"><br><br>
+            <label for="deckFormat">Deck Name:</label>
+            <select name="deckFormat" id="deckFormat"><br><br>
+                <option value="standard">Standard</option>
+                <option value="alchemy">Alchemy</option>
+                <option value="Modern">Modern</option>
+          </form> -->
+        </div>
+        <div id="CardAddPanel">
+            <div id="CenteredSelectBox">
+                <label for="deckFormat">Format:</label>
+                <select name="deckFormat" id="deckFormat" class="formInputElem formInputSelect"><br><br>
+                    <option value="standard">Standard</option>
+                    <option value="alchemy">Alchemy</option>
+                    <option value="Modern">Modern</option>
+                </select>
+                <label for="cardColor">Format:</label>
+                <select name="cardColor" id="cardColor" class="formInputElem formInputSelect"><br><br>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="green">Green</option>
+                    <option value="red">Red</option>
+                </select>
             </div>
-            <div class="deck deck3">
-                <h3 class="title">Deck 3</h3>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-                <div class="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="stroke" cx="60" cy="60" r="50" />
-                    </svg>
-                </div>
+            <div id="CardAddContainer">
+
             </div>
-            <div class="deck deck4">
-                <h3 class="title">Deck 4</h3>
-                <div class="bar">
-                    <div class="emptybar"></div>
-                    <div class="filledbar"></div>
-                </div>
-                <div class="circle">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
-                        <circle class="stroke" cx="60" cy="60" r="50" />
-                    </svg>
-                </div>
+        </div>
+        
+        <div id="DeckCardPanel" class="DeckCardPanel">
+            <div id="DeckCardContainer" class="DeckCardContainter">
             </div>
         </div>
     </div>
